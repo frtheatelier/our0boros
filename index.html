@@ -14,11 +14,6 @@
       <h1 class="title">our0boros</h1>
       <p>Ouroboros: a circular symbol depicting a snake, or less commonly a dragon, swallowing its tail, as an emblem of wholeness or infinity.</p>
       
-      <div class="callout">
-        <div class="date">15/08/2025</div>
-        <div>Established this site :")</div>
-      </div>
-      
       <div class="nav">
         <div class="button hoverable">About</div>
         <div class="button hoverable">Characters</div>
@@ -26,10 +21,25 @@
       </div>
     </div>
     <div class="callout fix-bottom-center">Site still in development haha (I have no idea when I will finish because this is intimidating hhaha)</div>
-    <div class="callout fix-top-right">
-      <a href="https://www.flaticon.com/free-icons/rec" class="hoverable">Rec icons created by Google - Flaticon</a>    
+    <div class="fix-top-right misc">
+      <div class="button hoverable" id="attribution" onclick="displayAttr()">Attributions</div>
+      <div class="button hoverable" id="update" onclick="displayUpdates()">Logs</div>
     </div>
 
+    <div class="fix-top-left" id="webcounter">
+      <div>> user<span id="hitcount">00</span></div>
+      <div>> <span id="currdate"></span></div>
+      <div>> <span id="currtime"></span></div>
+    </div>   
+
+    <div style="display: none;" id="updateIFRWrapper" class="center">
+      <iframe src="update.html" id="updateIFR"></iframe>
+    </div>
+
+    <div style="display: none;" id="attributionIFRWrapper" class="center">
+      <iframe src="attribution.html" id="attributionIFR"></iframe>
+    </div>
+         
     <script src="/app.js"></script>
 
     <!-- local -->

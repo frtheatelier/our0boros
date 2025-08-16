@@ -72,7 +72,7 @@ body {
 }
 
 .container {
-  width: 600px;
+  max-width: 600px;
 }
 
 .fix-bottom-center {
@@ -92,6 +92,12 @@ body {
   position: fixed;
   top: 35px;
   right: 25px;
+}
+
+.fix-top-left {
+  position: fixed;
+  top: 35px;
+  left: 25px;
 }
 
 .center {
@@ -119,6 +125,16 @@ a:hover {
 }
 
 /* https://codepen.io/team/css-tricks/pen/gOXMLLY */
+
+#hitwebcounter a {
+  box-shadow: none;
+  border-bottom: none;
+  transition: none;
+}
+
+/* #hitwebcounter img {
+  width: 75px;
+} */
 
 .title {
   font-size: 2.5rem;
@@ -174,18 +190,10 @@ a:hover {
   background: var(--border-bg);
   padding: 7px;
   
-  display: flex;
   margin-bottom: 15px;
   margin-top: 15px;
   
-  gap: 10px;
-  
   /*color: darkgrey;*/
-}
-
-.callout .date {
-  color: var(--accent-col);
-  font-weight: bold;
 }
 
 .pnf-title {
@@ -197,4 +205,47 @@ a:hover {
 .bordered-div {
   border: 2px solid var(--border-col);
   padding: 2rem;
+}
+
+.misc .button {
+  margin-bottom: 15px;
+}
+
+.misc {
+    justify-items: right;
+}
+
+.update, .attribution {
+  border: solid 2px var(--border-col);
+  background: var(--border-bg);
+  padding: 7px;
+  
+  display: grid;
+  grid-auto-rows: auto;
+  grid-template-columns: 1fr 4fr;
+  gap: 10px;
+}
+
+.update .date, .attribution .element {
+  color: var(--accent-col);
+  font-weight: bold;
+}
+
+#updateIFR, #attributionIFR {
+  width: 100%;
+  /* height:25px; */
+  border: none;
+}
+
+#attributionIFRWrapper, #updateIFRWrapper {
+  border: solid 2px var(--border-col);
+  background: var(--border-bg);
+  width: 75%;
+  max-height: 50%;
+}
+
+#webcounter {
+  border: solid 2px var(--border-col);
+  background: var(--border-bg);
+  padding: 7px;
 }
