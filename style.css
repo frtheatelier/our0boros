@@ -1,3 +1,8 @@
+html {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
 :root {
   --accent-col: rgb(85, 77, 53);
   --accent-bg: rgba(85, 77, 53, 0.377);
@@ -16,6 +21,10 @@ body {
   background-color: white;
   color: var(--text-col);
   font-family: ArialNarrow;
+
+  height: 100vh;
+
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -41,6 +50,30 @@ body {
     height: 200px;
 
 } */
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  /* margin: 0; */
+}
+
+.content, .preload {
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  align-items: center;
+  justify-content: center;
+
+  scroll-snap-align: start;
+}
 
 .hover-circle {
   position: absolute;
@@ -73,10 +106,18 @@ body {
 
 .container {
   max-width: 600px;
+  height: auto;
+}
+
+.abs-bottom-center {
+  position: absolute;
+  bottom: 35px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 .fix-bottom-center {
-  position: absolute;
+  position: fixed;
   bottom: 35px;
   left: 50%;
   transform: translate(-50%, 0);
@@ -162,6 +203,17 @@ a:hover {
   justify-content: center;
 }
 
+/* .nav {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  
+  position: relative;
+  top: 25px;
+  
+  justify-content: center;
+} */
+
 .button {
   text-decoration: none;
   text-transform: uppercase;
@@ -179,13 +231,13 @@ a:hover {
 }  
 
 .button:hover {
-  scale: 1.05;
+  scale: 1.08;
   background: var(--border-col);
   color: var(--text-dark-col);
   /* outline-offset: 3px; */
 }
 
-.callout {
+.callout, .callout-right {
   border: solid 2px var(--border-col);
   background: var(--border-bg);
   padding: 7px;
@@ -194,6 +246,30 @@ a:hover {
   margin-top: 15px;
   
   /*color: darkgrey;*/
+}
+
+.pop-up-header {
+  border: solid 2px var(--border-col);
+  background: var(--border-bg);
+  padding: 7px;
+  
+  margin-bottom: 15px;
+  margin-top: 15px;
+
+  display: flex;
+  text-transform: uppercase;
+}
+
+.pop-up-header .label {
+  width: calc(100% - 10px);
+  align-self: center;
+}
+
+.pop-up-header .close-button {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  line-height: 10px;
 }
 
 .pnf-title {
@@ -234,12 +310,13 @@ a:hover {
 #updateIFR, #attributionIFR {
   width: 100%;
   /* height:25px; */
-  border: none;
+  /* border: none; */
+  border: solid 2px var(--border-col);
+  background: var(--border-bg);
 }
 
 #attributionIFRWrapper, #updateIFRWrapper {
-  border: solid 2px var(--border-col);
-  background: var(--border-bg);
+  
   width: 75%;
   max-height: 50%;
 }
@@ -248,4 +325,19 @@ a:hover {
   border: solid 2px var(--border-col);
   background: var(--border-bg);
   padding: 7px;
+}
+
+.scroll-to-proceed {
+  justify-self: center;
+  animation: bop 1.5s ease-in-out infinite;
+}
+
+@keyframes bop {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    
+    50% {
+        transform: translateY(15%);
+    }
 }

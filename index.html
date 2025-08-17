@@ -10,34 +10,65 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    <div class="center container">
-      <h1 class="title">our0boros</h1>
-      <p>Ouroboros: a circular symbol depicting a snake, or less commonly a dragon, swallowing its tail, as an emblem of wholeness or infinity.</p>
-      
-      <div class="nav">
-        <div class="button hoverable">About</div>
-        <div class="button hoverable">Characters</div>
-        <div class="button hoverable">Lore</div>
+    <div class="wrapper">
+      <div class="preload">
+        <div class=" container">
+          <h1 class="title">our0boros</h1>
+          <p>Ouroboros: a circular symbol depicting a snake, or less commonly a dragon, swallowing its tail, as an emblem of wholeness or infinity.</p>
+          <p>let N be an arbitrary large real number. Define R^N to be a real coordinate space of dimension N.</p>
+          <p>Assume there exists an entiry or two that exist within this dimension. entities who are purpoted to be destroyed over random time value T to produce another set of entities.</p>
+          <p>Sounds far fetched? Believe me, it is. But still, let us explore this possibility together, shall we?</p>
+          
+          <div class="scroll-to-proceed">
+            <a href="#main">Scroll to proceed</a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="callout fix-bottom-center">Site still in development haha (I have no idea when I will finish because this is intimidating hhaha)</div>
-    <div class="fix-top-right misc">
-      <div class="button hoverable" id="attribution" onclick="displayAttr()">Attributions</div>
-      <div class="button hoverable" id="update" onclick="displayUpdates()">Logs</div>
-    </div>
+      <div class="content" id="main">
+        <!-- <div class="nav">
+          <div class="button hoverable">About</div>
+          <div class="button hoverable">Characters</div>
+          <div class="button hoverable">Lore</div>
+        </div> -->
+        <div class=" container">
+          <h1 class="title">our0boros</h1>
+          <p>Ouroboros: a circular symbol depicting a snake, or less commonly a dragon, swallowing its tail, as an emblem of wholeness or infinity.</p>
+          
+          <div class="nav">
+            <div class="button hoverable">About</div>
+            <div class="button hoverable">Characters</div>
+            <div class="button hoverable">Lore</div>
+          </div>
+        </div>
 
-    <div class="fix-top-left" id="webcounter">
-      <div>> user<span id="hitcount">00</span></div>
-      <div>> <span id="currdate"></span></div>
-      <div>> <span id="currtime"></span></div>
-    </div>   
+        <div class="callout fix-bottom-center">Site still in development haha (I have no idea when I will finish because this is intimidating hhaha)</div>
+        <div class="fix-top-right misc">
+          <div class="button hoverable" id="attribution" onclick="displayAttr()">Attributions</div>
+          <div class="button hoverable" id="update" onclick="displayUpdates()">Logs</div>
+        </div>
 
-    <div style="display: none;" id="updateIFRWrapper" class="center">
-      <iframe src="update.html" id="updateIFR"></iframe>
-    </div>
+        <div class="fix-top-left" id="webcounter">
+          <div>> user<span id="hitcount">00</span></div>
+          <div>> <span id="currdate"></span></div>
+          <div>> <span id="currtime"></span></div>
+        </div>   
 
-    <div style="display: none;" id="attributionIFRWrapper" class="center">
-      <iframe src="attribution.html" id="attributionIFR"></iframe>
+        <div style="display: none;" id="updateIFRWrapper" class="center">
+          <div class="pop-up-header">
+            <div class="label">UPDATE LOGS</div>
+            <div class="button close-button" onclick="displayUpdates()">X</div>
+          </div>
+          <iframe src="update.html" id="updateIFR"></iframe>
+        </div>
+
+        <div style="display: none;" id="attributionIFRWrapper" class="center">
+          <div class="pop-up-header">
+            <div class="label">ATTRIBUTION AND CREDITS DUE</div>
+            <div class="button close-button" onclick="displayAttr()">X</div>
+          </div>
+          <iframe src="attribution.html" id="attributionIFR"></iframe>
+        </div>
+      </div>
     </div>
          
     <script src="/app.js"></script>
